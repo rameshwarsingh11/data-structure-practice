@@ -13,4 +13,4 @@ def getTotalPairs(arr):
   return penalty
 
 
-print(getTotalPairs([1, 2, 3, 4]))
+print(getTotalPairs([1, 2, 3, 4]))    
