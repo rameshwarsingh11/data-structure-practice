@@ -36,7 +36,7 @@ def leftViewUtil(root, level, max_level, visible_nodes):
     return visible_nodes
 
 # Driver method
-if __name__ == '__main__':
+if __name__ == '__main__': 
     root = TreeNode(8)
     root.left = TreeNode(3)
     root.right = TreeNode(10)
