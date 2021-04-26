@@ -1,4 +1,4 @@
-# Find number of ways of change coins required for a target amount. Dynamic progrmming problem.
+# Find number of ways of change coins required for a target amount. Dynamic programing problem.
 # Solution using bottom-up algorithm
 def change_coins(n, coins):
   arr = [1] + [0]*n
