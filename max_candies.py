@@ -26,8 +26,8 @@ def maxCandies(arr, k):
   candies = 0
   pq = PriorityQueue()
 
-  #for candies_in_bag in arr:
-   # pq.put(candies_in_bag)
+  for candies_in_bag in arr:
+    pq.put(candies_in_bag)
 
   #l = list(pq.queue)
   for candybag in pq.queue:
@@ -46,7 +46,8 @@ def maxCandies(arr, k):
   return candies
 
 
-N = 5
-k = 3
-arr = [2, 1, 7, 4, 2]
-print(maxCandies(arr, k))
+if __name__ == '__main__':
+    N = 5
+    k = 3
+    arr = [2, 1, 7, 4, 2]
+    print(maxCandies(arr, k))
