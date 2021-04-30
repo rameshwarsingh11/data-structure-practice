@@ -17,37 +17,51 @@ k = 3
 arr = [2, 1, 7, 4, 2]
 output = 14
 """
-# Output is still wrong. Needs to be corrected.
 import math
-from queue import PriorityQueue
 
 
-def maxCandies(arr, k):
+def maxcandies(arr, k):
   candies = 0
-  pq = PriorityQueue()
 
-  for candies_in_bag in arr:
-    pq.put(candies_in_bag)
+  arr.sort(reverse=True)  # in place sorting
 
-  #l = list(pq.queue)
-  for candybag in pq.queue:
-    print(candybag)
-  #print('Candy bags array :',l)
-
-  for i in range(k):
-    pieces = pq.get()
-    #print('pieces', pieces)
-    candies += pieces
-    #print('candies', candies)
-    pieces = math.floor(pieces/2)
-    #print('In loop :', pieces)
-    pq.put(pieces)
+  for i in range(0, k):
+    candies += arr[0]
+    arr[0] = math.floor(arr[0]/2)
+    arr.sort(reverse=True)
+    #print('Candies eaten in', i+1, 'minute =', candies)
+    #print('Array ::', arr)
 
   return candies
 
 
+def check(expected, output):
+    rightTick = '\u2713'
+    wrongTick = '\u2717'
+    if expected == output:
+        print(rightTick, 'Test passed!')
+
+    else:
+        print(wrongTick, 'Test failed.')
+
+
+# Driver method:
 if __name__ == '__main__':
-    N = 5
-    k = 3
-    arr = [2, 1, 7, 4, 2]
-    print(maxCandies(arr, k))
+  N = 5  # means 5 candy bags
+  k = 3  # means you have total 3 minutes to eat candies
+  # array of candy bags. First candy bag has 2 candies, second has 1 candy, third has 7 candies and so on..
+  arr = [2, 1, 7, 4, 2]
+  output = maxcandies(arr, k)
+  expected = 14
+  check(expected, output)
+  
+  # Another test run :
+  n_2, k_2 = 9, 3
+  arr_2 = [19, 78, 76, 72, 48, 8, 24, 74, 29]
+  expected_2 = 228
+  output_2 = maxcandies(arr_2, k_2)
+  check(expected_2, output_2)
+  
+  # Your task is to find out in 3 minutes how many maximum candies you can eat.
+  print('Max candies eaten form the candy bags =', output)
+
