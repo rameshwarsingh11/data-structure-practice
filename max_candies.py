@@ -18,6 +18,7 @@ arr = [2, 1, 7, 4, 2]
 output = 14
 """
 import math
+from queue import PriorityQueue
 
 
 def maxcandies(arr, k):
@@ -33,6 +34,27 @@ def maxcandies(arr, k):
     #print('Array ::', arr)
 
   return candies
+
+
+# More efficient method :
+# Using PriorityQueue
+def max_candies(arr, k):
+  total_candies_eaten = 0
+  pq = PriorityQueue()
+
+  for candy_pieces in arr:
+    pq.put((-candy_pieces, candy_pieces))
+
+  for i in range(k):
+    priority, pieces = pq.get()
+    #print('pieces',pieces)
+    total_candies_eaten += pieces
+    #print('Candies eaten in', i+1, 'minute =',total_candies_eaten)
+    pieces = math.floor(pieces/2)
+    #print('In loop :',pieces)
+    pq.put((-pieces, pieces))
+
+  return total_candies_eaten
 
 
 def check(expected, output):
@@ -51,17 +73,18 @@ if __name__ == '__main__':
   k = 3  # means you have total 3 minutes to eat candies
   # array of candy bags. First candy bag has 2 candies, second has 1 candy, third has 7 candies and so on..
   arr = [2, 1, 7, 4, 2]
-  output = maxcandies(arr, k)
+  #output = maxcandies(arr, k)
+  output = max_candies(arr, k)
   expected = 14
   check(expected, output)
-  
+
   # Another test run :
   n_2, k_2 = 9, 3
   arr_2 = [19, 78, 76, 72, 48, 8, 24, 74, 29]
   expected_2 = 228
-  output_2 = maxcandies(arr_2, k_2)
+  #output_2 = maxcandies(arr_2, k_2)
+  output_2 = max_candies(arr_2, k_2)
   check(expected_2, output_2)
-  
+
   # Your task is to find out in 3 minutes how many maximum candies you can eat.
   print('Max candies eaten form the candy bags =', output)
-
