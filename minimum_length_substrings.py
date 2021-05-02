@@ -33,3 +33,4 @@ def matching_pairs(source, target):
     return count + 1
 
 print(matching_pairs(('abcd'),('adcb')))
+print(matching_pairs(('dcbefebce'),('fd')))
