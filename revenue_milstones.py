@@ -18,7 +18,6 @@ On days 4, 5, and 6, company has total revenue of $100, $150, and $210 respectiv
 
 from queue import Queue
 
-# Total revenue:
 
 
 def getMilestoneDays(revenues, milestones):
