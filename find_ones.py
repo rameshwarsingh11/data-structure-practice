@@ -1,4 +1,6 @@
 # Find number of ones in a sub array
+# Using greedy approach.
+#Solution: Time complexity : O(n) and Space complexity : O(1)
 
 def find_no_ones(start, end, arr):
   count = 0
