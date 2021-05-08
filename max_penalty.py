@@ -13,4 +13,19 @@ def getTotalPairs(arr):
   return penalty
 
 
-print(getTotalPairs([1, 2, 3, 4]))    
+def check(expected, output):
+    rightTick = '\u2713'
+    wrongTick = '\u2717'
+
+    if expected == output:
+        print(rightTick, 'Test passed !')
+
+    else:
+        print(wrongTick, 'Test failed.')
+
+
+if __name__ == '__main__':
+  expected = 26
+  output = getTotalPairs([1, 2, 3, 4])
+  check(expected, output)
+  print(output)
