@@ -10,11 +10,26 @@ def find_no_ones(start, end, arr):
       count += 1
   return count
 
+def check(expected, output):
+    rightTick ='\u2713'
+    wrongTick = '\u2717'
 
-start_1 = 0
-end_1 = 3
-start_2 = 2
-end_2 = 5
-arr = [0, 0, 1, 0, 1, 0]
-print(find_no_ones(start_1, end_1, arr))
-print(find_no_ones(start_2, end_2, arr))
+    if expected == output:
+        print(rightTick,'Test passed !')
+    
+    else:
+        print(wrongTick,'Test failed.')
+
+if __name__ =='__main__':
+    start_1 = 0
+    end_1 = 3
+    start_2 = 2
+    end_2 = 5
+    arr = [0, 0, 1, 0, 1, 0]
+    output_1 = find_no_ones(start_1, end_1, arr)
+    expected_1 =1
+    check(expected_1,output_1)
+    expected_2 = 2
+    output_2 = find_no_ones(start_2, end_2, arr)
+    check(expected_2,output_2)
+
