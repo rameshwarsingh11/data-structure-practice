@@ -19,7 +19,6 @@ On days 4, 5, and 6, company has total revenue of $100, $150, and $210 respectiv
 from queue import Queue
 
 
-
 def getMilestoneDays(revenues, milestones):
   q = Queue(maxsize=len(revenues))
   for revenue in revenues:
@@ -34,7 +33,7 @@ def getMilestoneDays(revenues, milestones):
   milestone_met = False
   for milestone in milestones:
     while total < milestone and not q.empty():
-      
+
       revenue = q.get()
       total += revenue
       #print('Total ', total)
@@ -52,10 +51,29 @@ def getMilestoneDays(revenues, milestones):
   return output
 
 
-revenues = [100, 200, 300, 400, 500]
-milestones = [300, 800, 1000, 1400]
-print(getMilestoneDays(revenues, milestones))
+def check(expected, output):
+    rightClick = '\u2713'
+    wrongTick = '\u2717'
 
-revenues_2 = [700, 800, 600, 400, 600, 700]
-milestones_2 = [3100, 2200, 800, 2100, 1000]
-print(getMilestoneDays(revenues_2, milestones_2))
+    if expected == output:
+        print(rightClick, 'Test passed !')
+
+    else:
+        print(wrongTick, 'Test failed.')
+
+
+if __name__ == '__main__':
+    revenues_1 = [100, 200, 300, 400, 500]
+    milestones_1 = [300, 800, 1000, 1400]
+    expected_1 = [2, 4, 4, 5]
+    output_1 = getMilestoneDays(revenues_1, milestones_1)
+    check(expected_1, output_1)
+
+    revenues_2 = [700, 800, 600, 400, 600, 700]
+    milestones_2 = [3100, 2200, 800, 2100, 1000]
+    expected_2 = [5, 4, 2, 3, 2]
+    output_2 = getMilestoneDays(revenues_2, milestones_2)
+    check(expected_2, output_2)
+
+    print('Test case 1 output = :', output_1, ', Expected = ', expected_1)
+    print('Test case 2 output = :', output_2, ', Expected = ', expected_2)
