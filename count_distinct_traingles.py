@@ -11,11 +11,13 @@ def countDistinctTriangles(arr):
 
 
 def check(expected, output):
+    rightTick = '\u2713'
+    wrongTick = '\u2717'
     if expected == output:
-        print('Test passed')
+        print(rightTick,'Test passed !')
 
     else:
-         print('Test failed.')
+         print(wrongTick,'Test failed.')
 
 
 # Driver method :
