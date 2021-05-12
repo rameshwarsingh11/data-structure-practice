@@ -18,11 +18,28 @@ def findEncryptedWord(s):
   return s[mid] + findEncryptedWord(s[0:mid]) + findEncryptedWord(s[(mid+1):])
 
 
+def check(expected, output):
+  rightTick = '\u2713'
+  wrongTick = '\u2717'
+
+  if expected == output:
+    print(rightTick, 'Test passed!')
+
+  else:
+    print(wrongTick, 'Test failed.')
+
+
 # Driver method :
 if __name__ == '__main__':
-    print('Encrypted String of [abc] is ::: ', findEncryptedWord('abc'))
+    expected_1 = 'bac'
+    output_1 = findEncryptedWord('abc')
+    check(expected_1, output_1)
+    print('Encrypted String of [abc] is ::: ', output_1)
     print('"""""""""""""""""""""""')
-    print('Encrypted String of [abcd] is ::: ', findEncryptedWord('abcd'))
+    expected_2 = 'bacd'
+    output_2 = findEncryptedWord('abcd')
+    check(expected_2, output_2)
+    print('Encrypted String of [abcd] is ::: ', output_2)
     print('"""""""""""""""""""""""')
     print('Encrypted String of [abcxba] is ::: ', findEncryptedWord('abcxcba'))
     print('"""""""""""""""""""""""')
