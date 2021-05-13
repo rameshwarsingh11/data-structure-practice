@@ -11,6 +11,8 @@ def anagram(s1, s2):
 print(anagram('Listen', 'Silent'))
 
 # Solution 2 : Use dictionary and count each character.
+
+
 def anagram_another(s1, s2):
     s1 = s1.replace(' ', '').lower()
     s2 = s2.replace(' ', '').lower()
@@ -43,4 +45,19 @@ def anagram_another(s1, s2):
     return True
 
 
-print(anagram_another('School master', 'The classroom'))
+def check(expected, output):
+    rightTick = '\u2713'
+    wrongTick = '\u2717'
+
+    if expected == output:
+        print(rightTick, 'Test passed.')
+
+    else:
+        print(wrongTick, 'Test failed')
+
+
+if __name__ == '__main__':
+    expected = True
+    output = anagram_another('School master', 'The classroom')
+    check(expected, output)
+    print(output)
