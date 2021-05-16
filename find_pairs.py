@@ -18,11 +18,27 @@ def pair_sum(array, k):
             output.add(((min)(num, target), (max)(num, target)))
 
     if len(output) > 0:
-        print(f'The pair(s) with the sum of {k} : {output}')
+        return output
     else:
         print('No such pair found.')
 
 # Test the function.
-# pair_sum([2,0],8)
-pair_sum([2, 2, 4, 5, 7, 9], 9)
-# pair_sum([2],4)
+
+
+def check(expected, output):
+    rightTick = '\u2713'
+    wrongTick = '\u2717'
+    if expected == output:
+        print(rightTick, 'Test passed.')
+
+    else:
+        print(wrongTick, 'Test failed.')
+
+
+if __name__ == '__main__':
+    expected = {(4, 5), (2, 7)}
+    k = 9
+    arr = [2, 2, 4, 5, 7, 9]
+    output = pair_sum(arr, k)
+    check(expected, output)
+    print(output)
