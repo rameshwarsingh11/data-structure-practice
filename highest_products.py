@@ -29,5 +29,22 @@ def highest_products(lst):
 
   return high_product_3num
 
+# Test the function.
 
-print(highest_products([3, 4, 9, 1]))
+
+def check(expected, output):
+    rightTick = '\u2713'
+    wrongTick = '\u2717'
+    if expected == output:
+        print(rightTick, 'Test passed.')
+
+    else:
+        print(wrongTick, 'Test failed.')
+
+
+if __name__ == '__main__':
+    expected = 108
+    arr = [3, 4, 9, 1]
+    output = highest_products(arr)
+    check(expected, output)
+    print(output)
