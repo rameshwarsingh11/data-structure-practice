@@ -8,7 +8,7 @@
 
 # Solution : Using recursion ( Not efficient solution)
 
-def recursion_coin(target_coin,coins_list):
+def recursion_coin(target_coin, coins_list):
   # Setting default to min coins required:
   min_coins = target_coin
 
@@ -18,7 +18,7 @@ def recursion_coin(target_coin,coins_list):
 
   else:
     # For every coin value that is <= target value (n)
-    for i in [c for c in coins_list if c<= target_coin]:
+    for i in [c for c in coins_list if c <= target_coin]:
       # Add a coin count and add to the recursive call.
       num_of_coins = 1 + recursion_coin(target_coin-i, coins_list)
 
@@ -28,7 +28,7 @@ def recursion_coin(target_coin,coins_list):
 
   return min_coins
 
-print(recursion_coin(20,[1,5,10]))
+#print(recursion_coin(20,[1,5,10]))
 # print(recursion_coin(78,[1,5,10,25]))
 # Above is time consuming solution for more complex problems like when target_coin = 78.
 
@@ -36,6 +36,7 @@ print(recursion_coin(20,[1,5,10]))
 # This approves saves the intermediary results in a cache for better performance and avoid recalculations.
 # This approach is efficient in Time but not much efficient in space as it will use more memory to store cached results.
 # This is space trades off but better than plain recursion approach.
+
 
 def rec_dynamic_coin(target_coin, coins_list, known_results):
  # Setting default to min coins required:
@@ -45,30 +46,44 @@ def rec_dynamic_coin(target_coin, coins_list, known_results):
   if target_coin in coins_list:
     known_results[target_coin] = 1
     return 1
-  
 
   # Return a known result if it is greater than 1
-  elif known_results[target_coin] >0:
+  elif known_results[target_coin] > 0:
     return known_results[target_coin]
 
   else:
     # For every coin value that is less than or equal than the target coin
-    for i in [ c for c in coins_list if c<=target_coin ]:
+    for i in [c for c in coins_list if c <= target_coin]:
       # Make a recursion call
-      num_coins = 1 + rec_dynamic_coin(target_coin - i,coins_list, known_results)
+      num_coins = 1 + \
+          rec_dynamic_coin(target_coin - i, coins_list, known_results)
 
       # Ressting the minimum coins
-      if num_coins< min_coins:
+      if num_coins < min_coins:
         min_coins = num_coins
 
         # Also reset that known result like clear the cache !
         known_results[target_coin] = min_coins
 
-      
   return min_coins
 
-target_coin = 74
-coins_list = [1,5,10,25]
-known_results = [0]*(target_coin+1)
 
-print(rec_dynamic_coin(target_coin,coins_list,known_results))
+def check(expected, output):
+  rightTick = '\u2713'
+  wrongTick = '\u2717'
+
+  if expected == output:
+    print(rightTick, 'Test passed!')
+
+  else:
+    print(wrongTick, 'Test failed.')
+
+
+if __name__ == '__main__':
+  target_coin = 74
+  coins_list = [1, 5, 10, 25]
+  known_results = [0]*(target_coin+1)
+  expected = 8
+  output = rec_dynamic_coin(target_coin, coins_list, known_results)
+  check(expected, output)
+  print(output)
