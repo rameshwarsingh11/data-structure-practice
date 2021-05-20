@@ -24,6 +24,21 @@ def findMaxProduct(arr):
   return final_arr
 
 
-n = 5
-arr = [1, 2, 3, 4, 5]
-print(findMaxProduct(arr))
+def check(expected, output):
+  rightTick = '\u2713'
+  wrongTick = '\u2717'
+
+  if expected == output:
+    print(rightTick, 'Test passed.')
+
+  else:
+    print(wrongTick, 'Test failed.')
+
+
+if __name__ == '__main__':
+  n = 5
+  arr = [1, 2, 3, 4, 5]
+  expected = [-1, -1, 6, 24, 60]
+  output = findMaxProduct(arr)
+  check(expected, output)
+  print(output)
