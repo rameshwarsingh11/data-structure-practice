@@ -23,4 +23,18 @@ def profit(stock_prices):
   return max_profit
 
 
-print(profit([45, 60, 50, 10]))
+def check(expected, output):
+  rightTick = '\u2713'
+  wrongTick = '\u2717'
+  if expected == output:
+    print(rightTick, 'Test passed')
+
+  else:
+    print(wrongTick, 'Test failed.')
+
+
+if __name__ == '__main__':
+  expected = 15
+  output = profit([45, 60, 50, 10])
+  check(expected, output)
+  print(output)
