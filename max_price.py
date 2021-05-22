@@ -15,4 +15,20 @@ def max_value(unsorted_prices, max_price):
 
   return sorted_prices[-1::][0]
 
-print(max_value([45, 67, 34, 21, 78, 90, 5], 90))
+
+def check(expected, output):
+  rightTick = '\u2713'
+  wrongTick = '\u2717'
+
+  if expected == output:
+    print(rightTick, 'Test passed!')
+
+  else:
+    print(wrongTick, 'Test failed.')
+
+
+if __name__ == '__main__':
+  expected = 90
+  output = max_value([45, 67, 34, 21, 78, 90, 5], 90)
+  check(expected, output)
+  print(output)
