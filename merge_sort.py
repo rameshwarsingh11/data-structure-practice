@@ -43,9 +43,23 @@ def merge_sort(arr):
       arr[k] = righthalf[j]
       j += 1
       k += 1
+  return arr
+  #print('Now merging ::', arr)
 
-  print('Now merging ::', arr)
 
-arr = [11,2,3,56,7,78,91,1]
-merge_sort(arr)
-print(arr)
+def check(expected, output):
+  rightTick = '\u2713'
+  wrongTick = '\u2717'
+  if expected == output:
+    print(rightTick, 'Test passed')
+
+  else:
+    print(wrongTick, 'Test failed.')
+
+
+if __name__ == '__main__':
+  arr = [11, 2, 3, 56, 7, 78, 91, 1]
+  expected = [1, 2, 3, 7, 11, 56, 78, 91]
+  output = merge_sort(arr)
+  check(expected, output)
+  print(output)
