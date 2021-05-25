@@ -18,9 +18,9 @@ def numberOfWays(arr, k):
   output = []
 
   for num in arr:
-    print('num', num)
+    #print('num', num)
     target = k-num
-    print('target', target)
+    #print('target', target)
 
     if target not in seen and target != num:
       seen.append(num)
@@ -29,17 +29,36 @@ def numberOfWays(arr, k):
       output.append(
           (num if num == target else min(num, target), max(num, target)))
 
-    print('seen', seen)
-    print('output', output)
-    print('============')
-  return 'Number of ways = '+str(len(output))
+    #print('seen', seen)
+    #print('output', output)
+    #print('============')
+  #return 'Number of ways = '+str(len(output))
+  return len(output)
 
 
-arr = [1, 5, 3, 3, 3]
+#arr = [1, 5, 3, 3, 3]
 # expected : Number of ways 4
 # arr =  [1, 2, 3, 4, 3] # Failing for this scenario. Need to fix the issue.
 #arr = [6]
 # expected : Number of ways 2
 # actual output : Number of ways 3
-k = 6
-print(numberOfWays(arr, k))
+#k = 6
+#print(numberOfWays(arr, k))
+
+def check(expected, output):
+  rightTick = '\u2713'
+  wrongTick = '\u2717'
+  if expected == output:
+    print(rightTick, 'Test passed')
+
+  else:
+    print(wrongTick, 'Test failed.')
+
+
+if __name__ == '__main__':
+  arr = [1, 5, 3, 3, 3]
+  k = 6
+  expected = 4
+  output = numberOfWays(arr, k)
+  check(expected, output)
+  print(output)
