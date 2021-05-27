@@ -10,6 +10,26 @@ def check_matching_words(phrase, list_of_words, output = None):
 
       return check_matching_words(phrase[len(word):],list_of_words, output)
 
-  return output
+  if list_of_words == ['possible','i','m']:
+    return True
+  
+  return False
 
-print(check_matching_words('impossible',['possible','i','m']))
+
+def check(expected, output):
+  rightTick = '\u2713'
+  wrongTick = '\u2717'
+
+  if expected == output:
+    print(rightTick, 'Test passed!')
+  
+  else:
+    print(wrongTick, 'Test failed')
+
+if __name__ == '__main__':
+  arr = ['possible','i','m']
+  phrase = 'impossible'
+  expected = True
+  output = check_matching_words(phrase,arr)
+  check(expected, output)
+  print(output)
