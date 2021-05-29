@@ -20,4 +20,21 @@ def findSignatureCounts(arr):
         res[k] = len(group)
   return res
 
-print(findSignatureCounts([2,1]))
+
+def check(expected, output):
+  rightTick = '\u2713'
+  wrongTick = '\u2717'
+
+  if expected == output:
+    print(rightTick, 'Test passed!')
+
+  else:
+    print(wrongTick, 'Test failed')
+
+
+if __name__ == '__main__':
+    expected = [2, 2]
+    arr = [2, 1]
+    output = findSignatureCounts(arr)
+    check(expected, output)
+    print(output)
