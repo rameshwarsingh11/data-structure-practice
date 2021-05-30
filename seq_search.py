@@ -15,6 +15,8 @@ def seq_search(arr, element):
   return found
 
 # For ordered/sorted list/array
+
+
 def ordered_seq_search(arr, element):
   pos = 0
   found = False  # This variable will become True when we get the element.
@@ -33,7 +35,23 @@ def ordered_seq_search(arr, element):
   return found
 
 
-arr1 = [1, 2, 6, 4, 5, 9, 3]
-print(seq_search(arr1, 5))
-arr2 = [1, 2, 3, 4, 5, 6, 9]
-print(ordered_seq_search(arr2, 8))
+def check(expected, output):
+  rightTick = '\u2713'
+  wrongTick = '\u2717'
+  if expected == output:
+    print(rightTick, 'Test passed.')
+
+  else:
+    print(wrongTick, 'Test failed.')
+
+
+if __name__ == '__main__':
+  expected1 = True
+  arr1 = [1, 2, 6, 4, 5, 9, 3]
+  output1 = seq_search(arr1, 5)
+  check(expected1, output1)
+
+  expected2 = False
+  arr2 = [1, 2, 3, 4, 5, 6, 9]
+  output2 = ordered_seq_search(arr2, 8)
+  check(expected2, output2)
