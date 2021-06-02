@@ -46,8 +46,21 @@ def partition(arr, first, last):
 
   return rightmark
 
+def check(expected, output):
+  rightTick ='\u2713'
+  wrongTick = '\u2717'
 
-arr = [34, 6, 5, 7, 8, 90, 1]
-print('Unsorted Array :::', arr)
-quick_sort(arr)
-print('Sorted Array :::', arr)
+  if expected == output:
+    print(rightTick, 'Test passed.')
+
+  else:
+    print(wrongTick, 'Test failed.')
+
+
+if __name__ == '__main__':
+  arr = [34, 6, 5, 7, 8, 90, 1]
+  quick_sort(arr)
+  output = arr
+  expected = [1,5,6,7,8,34,90]
+  check(expected, output)
+  print(arr)
