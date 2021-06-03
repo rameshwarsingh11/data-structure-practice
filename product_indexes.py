@@ -25,6 +25,19 @@ def index_prod(list):
   print('After backward traversal :::', output)
   return output
 
-final_output = index_prod([1,2,3,4,5])
+def check(expected, output):
+  rightTick = '\u2713'
+  wrongTick = '\u2717'
 
-print('Desired output :::',final_output)
+  if expected == output:
+    print(rightTick, 'Test passed.')
+
+  else:
+    print(wrongTick, 'Test failed.')
+
+if __name__ == '__main__':
+  arr = [1,2,3,4,5]
+  final_output = index_prod(arr)
+  expected = [120, 60, 40, 30, 24]
+  check(expected, final_output)
+  print('Desired output :::',final_output)
