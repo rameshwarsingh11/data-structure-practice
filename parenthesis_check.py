@@ -23,6 +23,26 @@ def balance_check(string):
         return False
   return len(stack) == 0
 
-print(balance_check('{}{{}}({)]'))
-print(balance_check('(((}}}[][]'))
-print(balance_check('[{()}]'))
+def check(expected, output):
+  rightTick = '\u2713'
+  wrongTick = '\u2717'
+
+  if expected == output:
+    print(rightTick, 'Test passed.')
+
+  else:
+    print(wrongTick, 'Test failed.')
+
+if __name__ == '__main__':
+  str_1 = '{}{{}}({)]'
+  str_2 = '(((}}}[][]'
+  str_3 = '[{()}]'
+  output_1 = balance_check(str_1)
+  expected_1 =  False
+  check(expected_1, output_1)
+  output_2 = balance_check(str_2)
+  expected_2 = False
+  check(expected_2, output_2)
+  output_3 = balance_check(str_3)
+  expected_3 = True
+  check(expected_3, output_3)
