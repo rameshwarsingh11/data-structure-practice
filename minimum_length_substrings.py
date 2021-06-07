@@ -103,8 +103,3 @@ if __name__ == "__main__":
   expected_2 = -1
   output_2 = min_length_substring(s2, t2)
   check(expected_2, output_2)
-
-s1 = "dcbefebce"
-t1 = "fd"
-
-print(min_length_substring(s1, t1))
