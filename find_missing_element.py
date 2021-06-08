@@ -17,7 +17,8 @@ def find_missing_element1(array1, array2):
     return array1[-1]
 
 
-print('Solution 1 :',find_missing_element1([1, 2, 3, 4, 5, 6, 7], [3, 4, 6, 7, 1, 2, ]))
+print('Solution 1 :', find_missing_element1(
+    [1, 2, 3, 4, 5, 6, 7], [3, 4, 6, 7, 1, 2, ]))
 
 # Solution 2: Using a Hashtable.
 
@@ -37,7 +38,9 @@ def find_missing_element2(array1, array2):
         else:
             d[num] -= 1
 
-print('Solution 2 :',find_missing_element2([1, 2, 3, 4, 5, 6, 7], [3, 4, 6, 7, 1, 2, ]))
+
+print('Solution 2 :', find_missing_element2(
+    [1, 2, 3, 4, 5, 6, 7], [3, 4, 6, 7, 1, 2, ]))
 
 # Solution 3 : Find the sum of numbers of the first and second array. Then deduct sum of second array from that of first array. This approach is good for only small array sizes. For long array sizes or very large numbers, it will cause an overflow.
 # And not suitable to arrays with floating numbers.
@@ -56,4 +59,22 @@ def find_missing_element3(array1, array2):
 
     return result
 
-print('Solution 4 :',find_missing_element3([1, 2, 3, 4, 5, 6, 7], [3, 4, 6, 7, 1, 2, ]))
+
+def check(expected, output):
+    rightTick = '\u2713'
+    wrongTick = '\u2717'
+
+    if expected == output:
+        print(rightTick, 'Test passed.')
+
+    else:
+        print(wrongTick, 'Test failed.')
+
+
+if __name__ == '__main__':
+    arr1 = [1, 2, 3, 4, 5, 6, 7]
+    arr2 = [3, 4, 6, 7, 1, 2, ]
+    expected = 5
+    output = find_missing_element1(arr1, arr2)
+    check(expected, output)
+    print(output)
