@@ -73,8 +73,13 @@ def check(expected, output):
 
 if __name__ == '__main__':
     arr1 = [1, 2, 3, 4, 5, 6, 7]
-    arr2 = [3, 4, 6, 7, 1, 2, ]
-    expected = 5
-    output = find_missing_element1(arr1, arr2)
-    check(expected, output)
-    print(output)
+    arr2 = [3, 4, 6, 7, 1, 2]
+    arr3 = [3, 4, 6, 7, 1, 2, 3]
+    expected_1 = 5
+    expected_2 = 4
+    output_1 = find_missing_element1(arr1, arr2)
+    output_2 = find_missing_element1(arr1, arr3)
+    check(expected_1, output_1)
+    check(expected_2, output_2)
+    print(output_1)
+    print(output_2)
