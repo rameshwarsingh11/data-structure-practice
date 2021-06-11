@@ -32,8 +32,11 @@ def check(expected, output):
 
 
 if __name__ == '__main__':
-  expected = 17
-  arr = [1, 2, 3, 4, -1, -2, 0, 10]
-  output = largest_countinous_sum_array(arr)
-  check(expected, output)
-  print(output)
+  expected_1 = 17
+  arr_1 = [1, 2, 3, 4, -1, -2, 0, 10]
+  expected_2 = 18
+  arr_2 = [1, 2, 3, 4, -1, -2, 0, 11]
+  output_1 = largest_countinous_sum_array(arr_1)
+  check(expected_1, output_1)
+  output_2 = largest_countinous_sum_array(arr_2)
+  check(expected_2, output_2)
