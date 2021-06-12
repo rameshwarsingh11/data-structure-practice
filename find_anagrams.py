@@ -57,7 +57,9 @@ def check(expected, output):
 
 
 if __name__ == '__main__':
-    expected = True
-    output = anagram_another('School master', 'The classroom')
-    check(expected, output)
-    print(output)
+    expected_1 = True
+    output_1 = anagram_another('School master', 'The classroom')
+    check(expected_1, output_1)
+    expected_2 = False
+    output_2 = anagram_another('Halloween', 'weenHello')
+    check(expected_2, output_2)
