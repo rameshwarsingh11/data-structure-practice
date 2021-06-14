@@ -11,10 +11,7 @@ def findEncryptedWord(s):
 
   #mid is middle number if the length of the string is odd otherwise mid = s[middle-1]
   mid = int(len(s)/2) if len(s) % 2 != 0 else (int((len(s)/2)-1))
-  #print(mid)
-  #print(s[mid])
-  #print(s[0:mid])
-  #print(s[mid+1:])
+
   return s[mid] + findEncryptedWord(s[0:mid]) + findEncryptedWord(s[(mid+1):])
 
 
