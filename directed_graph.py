@@ -40,4 +40,4 @@ class Graph:
 graph = Graph()
 graph.add_edge(0, 1, 6)
 graph.add_edge(1, 2, 5)
-print(graph.nodes)
+print('Total nodes added =', graph.nodes.__len__())
