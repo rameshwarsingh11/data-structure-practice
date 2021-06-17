@@ -20,3 +20,4 @@ def dfs(graph,start):
   return already_visited
 
 print(dfs(graph,'A'))
+print(dfs(graph, 'F'))
