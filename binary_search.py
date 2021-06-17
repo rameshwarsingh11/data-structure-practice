@@ -21,3 +21,5 @@ def binary_search(arr, ele):
           first = mid + 1
 
   return found
+
+print(binary_search([1,2,4,7,34,9], 9))
