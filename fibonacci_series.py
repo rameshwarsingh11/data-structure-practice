@@ -84,3 +84,4 @@ def memoize(fn, arg):
 
 
 print(memoize(fib4, 6))
+print(memoize(fib4, 89))
