@@ -63,3 +63,6 @@ if __name__ == '__main__':
     expected_2 = False
     output_2 = anagram_another('Halloween', 'weenHello')
     check(expected_2, output_2)
+    expected_3 = True
+    output_3 = anagram_another('The master', 'master The')
+    check(expected_3, output_3)
