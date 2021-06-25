@@ -77,9 +77,13 @@ if __name__ == '__main__':
     arr3 = [3, 4, 6, 7, 1, 2, 3]
     expected_1 = 5
     expected_2 = 4
+    expected_3 = 4
     output_1 = find_missing_element1(arr1, arr2)
     output_2 = find_missing_element1(arr1, arr3)
+    output_3 = find_missing_element1(arr2, arr3)
     check(expected_1, output_1)
     check(expected_2, output_2)
+    check(expected_3, output_3)
     print(output_1)
     print(output_2)
+    print(output_3)
