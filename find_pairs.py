@@ -36,9 +36,12 @@ def check(expected, output):
 
 
 if __name__ == '__main__':
-    expected = {(4, 5), (2, 7)}
+    expected_1 = {(4, 5), (2, 7)}
     k = 9
     arr = [2, 2, 4, 5, 7, 9]
-    output = pair_sum(arr, k)
-    check(expected, output)
-    print(output)
+    output_1 = pair_sum(arr, k)
+    check(expected_1, output_1)
+    k = 4
+    expected_2 = {(2,2)}
+    output_2 = pair_sum(arr,k)
+    check(expected_2, output_2)
