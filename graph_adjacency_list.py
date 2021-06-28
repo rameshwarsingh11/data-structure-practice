@@ -12,6 +12,9 @@ class Vertex:
   def getConnections(self):
     return self.connectedTo.keys()
 
+  def getVertexWeight(self,nbr=1):
+    return self.connectedTo[nbr].weight
+
   def getId(self):
     return self.id
 
@@ -72,4 +75,5 @@ graph.addEdge(0, 2, 55)
 for vertex in graph:  # Use special methods
     print(vertex)
     print(vertex.getConnections())
+    print(vertex.getVertexWeight())
     print('\n')
