@@ -60,6 +60,6 @@ def check(expected, output):
 if __name__ == '__main__':
   arr = [11, 2, 3, 56, 7, 78, 91, 1]
   expected = [1, 2, 3, 7, 11, 56, 78, 91]
-  output = merge_sort(arr)
+  output = merge_sort(arr) # It is an in place sorting. No new array was created to make the algorithm cost efficient.
   check(expected, output)
   print(output)
