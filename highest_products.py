@@ -47,4 +47,5 @@ if __name__ == '__main__':
     arr = [3, 4, 9, 1]
     output = highest_products(arr)
     check(expected, output)
+    check(expected, 45)
     print(output)
