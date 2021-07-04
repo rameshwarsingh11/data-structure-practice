@@ -41,6 +41,8 @@ if __name__ == '__main__':
     root = Node(1)
     root.children.append(Node(2))
     root.children.append(Node(3))
-    queries = [(1, 'a')]
+    queries1 = [(1, 'a')]
+    queries2 = [(2, 'b')]
 
-    print(count_of_nodes(root, queries, s))
+    print(count_of_nodes(root, queries1, s))
+    print(count_of_nodes(root, queries2, s))
