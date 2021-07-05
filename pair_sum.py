@@ -57,8 +57,13 @@ def check(expected, output):
 
 if __name__ == '__main__':
   arr = [1, 5, 3, 3, 3]
-  k = 6
-  expected = 4
-  output = numberOfWays(arr, k)
-  check(expected, output)
-  print(output)
+  k_1 = 6
+  k_2 = 4
+  expected_1 = 4
+  expected_2 = 3
+  output_1 = numberOfWays(arr, k_1)
+  check(expected_1, output_1)
+  output_2 = numberOfWays(arr, k_2)
+  check(expected_2, output_2)
+  print(output_1)
+  print(output_2)
