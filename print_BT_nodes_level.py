@@ -42,3 +42,4 @@ root.left.left = Node(5)
 root.right = Node(3)
 
 print(levelOrderPrint(root))
+print(levelOrderPrint(root.left))
