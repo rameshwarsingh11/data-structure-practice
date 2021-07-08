@@ -43,3 +43,4 @@ root.right = Node(3)
 
 print(levelOrderPrint(root))
 print(levelOrderPrint(root.left))
+print(levelOrderPrint(root.right))
