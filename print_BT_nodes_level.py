@@ -40,6 +40,7 @@ root = Node(1)
 root.left = Node(2)
 root.left.left = Node(5)
 root.right = Node(3)
+root.right.val = 45
 
 print(levelOrderPrint(root))
 print(levelOrderPrint(root.left))
