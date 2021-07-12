@@ -20,8 +20,9 @@ class Queue_with_Stack(object):
         return self.outstack.pop()
 
 
-q = Queue_with_Stack()
-q.enqueu(2)
-q.enqueu(3)
-q.enqueu(5)
-print('Removing one item from Queue (FIFO): ',q.dequeue())
+if __name__ == '__main__':
+    q = Queue_with_Stack()
+    q.enqueu(2)
+    q.enqueu(3)
+    q.enqueu(5)
+    print('Removing one item from Queue (FIFO): ',q.dequeue())
