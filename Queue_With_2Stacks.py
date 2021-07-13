@@ -26,3 +26,4 @@ if __name__ == '__main__':
     q.enqueu(3)
     q.enqueu(5)
     print('Removing one item from Queue (FIFO): ',q.dequeue())
+    print(q.enqueu(56))
