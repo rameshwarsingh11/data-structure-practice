@@ -58,9 +58,9 @@ def check(expected, output):
 
 
 if __name__ == '__main__':
-  arr = [34, 6, 5, 7, 8, 90, 1]
+  arr = [34, 6, 5, 7, 8, 90, 1, 56700,89000, 4,976567800000]
   quick_sort(arr)
   output = arr
-  expected = [1,5,6,7,8,34,90]
+  expected = [1,4,5,6,7,8,34,90, 56700, 89000, 976567800000]
   check(expected, output)
   print(arr)
