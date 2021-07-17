@@ -37,3 +37,4 @@ print('\n Case 2 :::')
 rect3 = {'x': 1, 'y': 3, 'w': 3, 'h': 3}
 rect4 = {'x': 2, 'y': 9, 'w': 7, 'h': 4}
 print(calculate_rectangle_overlap(rect3, rect4))
+print(calculate_rectangle_overlap(rect2, rect4))
