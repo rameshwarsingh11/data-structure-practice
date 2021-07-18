@@ -22,3 +22,4 @@ def find_permutations(string):
   return output
 
 print(find_permutations('TBD'))
+print(find_permutations('BLUE'))
