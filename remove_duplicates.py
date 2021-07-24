@@ -12,4 +12,4 @@ def remove_duplications(str):
 
 
 print(remove_duplications('My Monkey.'))
-print(remove_duplications('My Monkey.My Monkey.My Monkey.My Monkey.My Monkey.My Monkey.My Monkey.My Monkey.My Monkey.My Monkey.My Monkey.'))
+print(remove_duplications('My Monkey.My Monkey2.My Monkey3.My Donkey.My Monkey.My Monkey.My Honk.My Monkey.My Monkey3.My Monkey3.My Monkey.'))
