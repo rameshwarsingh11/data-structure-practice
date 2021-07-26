@@ -29,3 +29,4 @@ def compress_String(string):
   return run
 
 print(compress_String('AAABBBOOooNMP'))
+print(compress_String('ABSDLREOTJFNASDAJOTJOERNkajdkjaurioeohrkankdfnkandkafLOPOPRJFDMCMJOEORETTtttBBBUUUuuuTTTWWWTTTT21'))
