@@ -17,3 +17,4 @@ def unique_character2(string):
   return True
 
 print(unique_character2('cfghit'))
+print(unique_character('cfghit'))
