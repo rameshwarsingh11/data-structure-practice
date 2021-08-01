@@ -32,3 +32,4 @@ def rotational_cipher(string, r_factor):
 
 
 print(rotational_cipher('abcd-90', 2))
+print(rotational_cipher('9856-abcb1234ltd-io90', 8))
