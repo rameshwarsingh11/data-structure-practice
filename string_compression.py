@@ -1,4 +1,4 @@
-# Problem : Provide an algorith to compress a string and print LetterCount pattern. Like CCAABBIIaNM should print : C2A2B2I2a1N1M1
+# Problem : Provide an algorithm to compress a string and print LetterCount pattern. Like CCAABBIIaNM should print : C2A2B2I2a1N1M1
 # Note : string in python is immutable.
 # Solution : Big O notation for Time & Space complexity for this algorithm is : O(n)
 def compress_String(string):
@@ -29,4 +29,4 @@ def compress_String(string):
   return run
 
 print(compress_String('AAABBBOOooNMP'))
-print(compress_String('ABSDLREOTJFNASDAJOTJOERNkajdkjaurioeohrkankdfnkandkafLOPOPRJFDMCMJOEORETTtttBBBUUUuuuTTTWWWTTTT21'))
+print(compress_String('AaAAAAAAABBBBBBBSDLREOTJFNASDAAAAAAAJJJJJJJJJJJJOOOOO000OOOOOTJOERNkajdkjaurioeohrkankdfnkandkafLOPOPRJFDMCMJOEORETTtttBBBUUUuuuTTTWWWTTTT21'))
