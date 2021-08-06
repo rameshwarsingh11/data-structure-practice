@@ -77,3 +77,5 @@ if __name__ == '__main__':
 
     print('Test case 1 output = :', output_1, ', Expected = ', expected_1)
     print('Test case 2 output = :', output_2, ', Expected = ', expected_2)
+
+# Need to optimize the solution with Big O (mlogn) complexity using Binary search algorithm.
