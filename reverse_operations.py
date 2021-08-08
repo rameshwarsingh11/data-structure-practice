@@ -58,12 +58,14 @@ def check(expectedHead, outputHead):
   wrongTick = '\u2717'
   if result:
     print(rightTick, ' Test #', test_case_number, sep='')
+    return True
   else:
     print(wrongTick, ' Test #', test_case_number, ': Expected ', sep='', end='')
     printLinkedList(tempExpectedHead)
     print(' Your output: ', end='')
     printLinkedList(tempOutputHead)
     print()
+    return False
   test_case_number += 1
 
 def createLinkedList(arr):
@@ -82,10 +84,10 @@ if __name__ == "__main__":
   head_1 = createLinkedList([1, 2, 8, 9, 12, 16])
   expected_1 = createLinkedList([1, 8, 2, 9, 16, 12])
   output_1 = reverse(head_1)
-  check(expected_1, output_1)
+  print(check(expected_1, output_1))
 
   head_2 = createLinkedList([2, 18, 24, 3, 5, 7, 9, 6, 12])
   expected_2 = createLinkedList([24, 18, 2, 3, 5, 7, 9, 12, 6])
   output_2 = reverse(head_2)
-  check(expected_2, output_2)
+  print(check(expected_2, output_2))
   
