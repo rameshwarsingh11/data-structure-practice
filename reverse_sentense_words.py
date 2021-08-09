@@ -33,3 +33,4 @@ def words_reversal3(string):
   return " ".join(reversed(words))
 
 print(words_reversal3("Nothing is impossible "))
+print(words_reversal3("Impossible is Nothing "))
