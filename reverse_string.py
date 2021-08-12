@@ -9,4 +9,3 @@ def reversestring(s):
   return reversestring(s[1:]) + s[0]
 
 print(reversestring('Hello.'))
-print(reversestring(reversestring('Hello')))
