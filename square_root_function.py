@@ -56,4 +56,3 @@ def sqrt_binary_search(num):
   return low
 
 print(sqrt_binary_search(17))
-print(sqrt_binary_search(43989834372897592739594759311020083948317))
