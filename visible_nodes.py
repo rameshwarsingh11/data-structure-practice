@@ -102,4 +102,3 @@ if __name__ == "__main__":
   expected_2 = 5
   output_2 = visible_nodes(root_2)
   check(expected_2, output_2)
-  check(expected_1,output_2)
