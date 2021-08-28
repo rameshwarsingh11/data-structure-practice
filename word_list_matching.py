@@ -32,4 +32,3 @@ if __name__ == '__main__':
   expected = True
   output = check_matching_words(phrase,arr)
   check(expected, output)
-  print(output)
