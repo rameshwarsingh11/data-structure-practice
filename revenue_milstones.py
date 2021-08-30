@@ -15,9 +15,7 @@ Explanation
 On days 4, 5, and 6, company has total revenue of $100, $150, and $210 respectively. Day 6 is the first time that the compnay has >= $200 of total revenue.
 '''
 
-
 from queue import Queue
-
 
 def getMilestoneDays(revenues, milestones):
   q = Queue(maxsize=len(revenues))
@@ -36,11 +34,9 @@ def getMilestoneDays(revenues, milestones):
 
       revenue = q.get()
       total += revenue
-      #print('Total ', total)
       days += 1
 
     if total >= milestone:
-      #print('Milestone', milestone, ' achieved in', days, 'days')
       milestone_met = True
       output.append(days)
 
