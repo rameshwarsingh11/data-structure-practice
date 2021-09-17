@@ -14,12 +14,8 @@ def profit(stock_prices):
 
   for price in stock_prices:
     min_stock_price = min(min_stock_price, price)
-    # print('min_stock_price',min_stock_price)
     comparison_profit = price - min_stock_price
-    # print('comparison_profit',comparison_profit)
     max_profit = max(max_profit, comparison_profit)
-    # print('max_profit',max_profit)
-    # print('\n')
   return max_profit
 
 
