@@ -17,6 +17,7 @@ On days 4, 5, and 6, company has total revenue of $100, $150, and $210 respectiv
 
 from queue import Queue
 
+
 def getMilestoneDays(revenues, milestones):
   q = Queue(maxsize=len(revenues))
   for revenue in revenues:
@@ -74,4 +75,29 @@ if __name__ == '__main__':
     print('Test case 1 output = :', output_1, ', Expected = ', expected_1)
     print('Test case 2 output = :', output_2, ', Expected = ', expected_2)
 
-    # Add more versions of the solution for optimized solution.
+    # Adding more versions of the solution for optimized solution.
+    def getMilestoneDays(revenues, milestones):
+      N = len(revenues)
+      cummulative_revenues = revenues[:]
+      for i in range(1, N):
+        cummulative_revenues[i] += cummulative_revenues[i-1]
+
+      def search(arr, target):
+        lo, hi = 0, len(arr)
+        while lo < hi:
+          mid = lo + hi >> 1
+          if arr[mid] >= target:
+            hi = mid
+          else:
+            lo = mid + 1
+        return lo
+
+      res = []
+      for m in milestones:
+        idx = search(cummulative_revenues, m)
+        res.append(idx + 1 if idx != N else -1)
+      return res
+
+    revenues = [100, 200, 300, 400, 500]
+    milestones = [300, 800, 1000, 1400]
+    print(getMilestoneDays(revenues, milestones))
