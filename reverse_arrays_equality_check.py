@@ -25,4 +25,5 @@ def reverse_array(array_b,start,end):
 
     return array_b
 
-print(are_they_equal([1,2,3,4],[2,3,4,1]))
+if __name__ == "__main__":
+    print(are_they_equal([1,2,3,4],[2,3,4,1]))
