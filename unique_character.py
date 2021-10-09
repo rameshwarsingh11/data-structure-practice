@@ -15,6 +15,5 @@ def unique_character2(string):
       characters.add(letter)
 
   return True
-
-print(unique_character2('cfghit'))
+  
 print(unique_character('cfghit'))
