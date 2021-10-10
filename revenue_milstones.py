@@ -101,3 +101,28 @@ if __name__ == '__main__':
     revenues = [100, 200, 300, 400, 500]
     milestones = [300, 800, 1000, 1400]
     print(getMilestoneDays(revenues, milestones))
+
+
+def getMilestoneDays(revenues, milestones):
+    # Write your code here
+    m = 0
+    pointer = {x: i for i, x in enumerate(milestones)}
+    milestones.sort()
+    milestone_length = len(milestones)
+    start = 0
+    ret = [0 for _ in range(milestone_length)]
+    for i, x in enumerate(revenues):
+      start += x
+      while m < milestone_length and start >= milestones[m]:
+        ret[pointer[milestones[m]]] = i+1
+        m += 1
+
+      if m == milestone_length:
+        break
+
+    return ret
+
+
+revenues = [100, 200, 300, 400, 500]
+milestones = [300, 800, 1000, 1400]
+print(getMilestoneDays(revenues, milestones))
