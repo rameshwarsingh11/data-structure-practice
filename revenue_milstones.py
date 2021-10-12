@@ -104,7 +104,7 @@ if __name__ == '__main__':
 
 
 def getMilestoneDays(revenues, milestones):
-    # Write your code here
+    #Setting initial milestone
     m = 0
     pointer = {x: i for i, x in enumerate(milestones)}
     milestones.sort()
