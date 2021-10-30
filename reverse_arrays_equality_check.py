@@ -27,5 +27,3 @@ def reverse_array(array_b,start,end):
 
 if __name__ == "__main__":
     print(are_they_equal([1,2,3,4],[2,3,4,1]))
-    #print(are_they_equal([3,5,6], [8,9,5,6,3]))
-    #print(are_they_equal([3,5,6], [8,9,5,6]))
