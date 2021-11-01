@@ -29,15 +29,15 @@ b.nextnode = c
 c.nextnode = d
 d.nextnode = None
 
-print(a.value)
-print(a.nextnode.value)
-print(b.nextnode.value)
-print(c.nextnode.value)
+#print(a.value)
+#print(a.nextnode.value)
+#print(b.nextnode.value)
+#print(c.nextnode.value)
 
 reverse_linked_list(a) 
-print('Printing reverse list now.')
+#print('Printing reverse list now.')
 
-print(d.value)
-print(d.nextnode.value)
-print(c.nextnode.value)
-print(b.nextnode.value)
+#print(d.value)
+#print(d.nextnode.value)
+#print(c.nextnode.value)
+#print(b.nextnode.value)
