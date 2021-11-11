@@ -20,10 +20,7 @@ def rec_coin(target, coins):
   return min_coins
 
 
-#print(rec_coin(15, [1, 5, 10]))
-#print(rec_coin(63, [1, 5, 10, 25]))
-
-  # Coin change problem :
+# Coin change problem :
 # Using Dynamic programming
 
 def rec_coin_dynamic(target, coins, known_results):
@@ -59,7 +56,6 @@ target = 63
 coins = [1, 5, 10, 25]
 known_results = [0]*(target+1)
 print(rec_coin_dynamic(target, coins, known_results))
-
 
 target = 74
 coins = [1, 5, 10, 25]
