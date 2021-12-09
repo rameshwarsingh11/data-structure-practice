@@ -42,7 +42,7 @@ def find_missing_element2(array1, array2):
 print('Solution 2 :', find_missing_element2(
     [1, 2, 3, 4, 5, 6, 7], [3, 4, 6, 7, 1, 2, ]))
 
-# Solution 3 : Find the sum of numbers of the first and second array. Then deduct sum of second array from that of first array. This approach is good for only small array sizes. For long array sizes or very large numbers, it will cause an overflow.
+# Solution 3 : Find the sum of numbers of the first and second array. Then deduct sum of second array from that of first array and the result is the missing number. This approach is good for only small array sizes. For long array sizes or very large numbers, it will cause an overflow.
 # And not suitable to arrays with floating numbers.
 
 
