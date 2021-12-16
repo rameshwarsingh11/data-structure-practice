@@ -32,5 +32,4 @@ z = Node(3)
 x.nextnode = y
 y.nextnode = z
 z.nextnode = x
-# z.nextnode = None
 print(circular_check(x))
