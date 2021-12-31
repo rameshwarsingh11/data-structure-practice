@@ -1,10 +1,17 @@
 def friendSuggest(dict_friends, name_key):
     suggestedFriends = set()
+    #print(B)
+    #print(dict_friends)
     #dict_friends['Rob'] = listoffriendsofrob
     for names in dict_friends:
+     print('names:::',names)
      for d_name in names:
-         if d_name not in names:
-             if d_name == name_key:
+         for c_name in d_name:
+             print('c_name:::',c_name)
+            #print(d_name)
+         #print('d_name:::',d_name)
+             if d_name not in names:
+                if d_name == name_key:
                  continue
              else:
                 suggestedFriends.add(d_name)
@@ -19,5 +26,4 @@ D = ['B', 'A', 'F']
 G = ['H', 'J']
 J = ['H', 'G', 'K', 'M']
 
-#Rob.FriendSuggest() == [J, D, E, F]
 print(friendSuggest(Rob, 'Rob'))
