@@ -72,7 +72,7 @@ graph.vertList
 graph.addEdge(0, 1, 45)
 graph.addEdge(1, 2, 50)
 graph.addEdge(0, 2, 55)
-for vertex in graph:  # Use special methods
+for vertex in graph:  
     print(vertex)
     print(vertex.getConnections())
     print(vertex.getVertexWeight())
