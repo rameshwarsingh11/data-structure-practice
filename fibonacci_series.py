@@ -1,5 +1,8 @@
+import time
 # Provide a fibonacci series function that returns the nth number in the series
 # Way 1 : Using Loops
+
+
 def fib1(n):
 
   a, b = 1, 1
@@ -83,7 +86,10 @@ def memoize(fn, arg):
   return memo[arg]
 
 
+start = time.time()
 print(memoize(fib4, 6))
-print(memoize(fib4, 89))
-print(memoize(fib4, 56))
-
+end = time.time()
+print('Execution time = ', round(end-start,10) ,'seconds')
+#print(memoize(fib4, 89))
+#print(memoize(fib4, 56))
+#print(memoize(fib4, 8459093456832410))
