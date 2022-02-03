@@ -41,6 +41,3 @@ if __name__ == '__main__':
     print('Encrypted String of [abcxba] is ::: ', findEncryptedWord('abcxcba'))
     print('"""""""""""""""""""""""')
     print('Encrypted String of [FAANGS] is ::: ', findEncryptedWord('FAANGS'))
-    print('"""""""""""""""""""""""')
-    print('Encrypted String of [AWS] is ::: ', findEncryptedWord('AWS'))
-    print('"""""""""""""""""""""""')
