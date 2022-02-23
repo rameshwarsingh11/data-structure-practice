@@ -37,7 +37,3 @@ if __name__ == '__main__':
     output_2 = findEncryptedWord('abcd')
     check(expected_2, output_2)
     print('Encrypted String of [abcd] is ::: ', output_2)
-    print('"""""""""""""""""""""""')
-    print('Encrypted String of [abcxba] is ::: ', findEncryptedWord('abcxcba'))
-    print('"""""""""""""""""""""""')
-    print('Encrypted String of [FAANGS] is ::: ', findEncryptedWord('FAANGS'))
