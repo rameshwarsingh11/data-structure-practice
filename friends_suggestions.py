@@ -3,7 +3,7 @@ def friendSuggest(dict_friends, name_key):
     suggestedFriends = set()
     #print(B)
     #print(dict_friends)
-    #dict_friends['Rob'] = listoffriendsofrob
+    #dict_friends['Rob'] = list of friends of Rob
     for names in dict_friends:
      print('names:::', names)
      for d_name in names:

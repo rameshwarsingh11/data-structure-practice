@@ -30,8 +30,6 @@ def highest_products(lst):
   return high_product_3num
 
 # Test the function.
-
-
 def check(expected, output):
     rightTick = '\u2713'
     wrongTick = '\u2717'
