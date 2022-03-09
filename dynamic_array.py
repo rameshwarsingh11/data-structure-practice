@@ -40,5 +40,3 @@ class DynamicArray(object):
 arr = DynamicArray()
 arr.append(90)
 arr.append(24)
-#print(len(arr))
-#print(arr.A[0])
