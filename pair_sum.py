@@ -31,7 +31,6 @@ def numberOfWays(arr, k):
 
     #print('seen', seen)
     #print('output', output)
-    #print('============')
   #return 'Number of ways = '+str(len(output))
   return len(output)
 
