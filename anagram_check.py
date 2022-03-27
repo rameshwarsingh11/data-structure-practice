@@ -44,5 +44,5 @@ def anagram2(s1, s2):
     return True
 
 
-print(anagram('God forbid', 'Bid for dog'))
-print(anagram2('God forbid', 'Bid for dog'))
+#print(anagram('God forbid', 'Bid for dog'))
+#print(anagram2('God forbid', 'Bid for dog'))
