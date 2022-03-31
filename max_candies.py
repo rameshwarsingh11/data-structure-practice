@@ -66,6 +66,16 @@ def check(expected, output):
     else:
         print(wrongTick, 'Test failed.')
 
+# More optimizes way
+def max_candies1(arr, k):
+  arr.sort()
+  maxValues = arr[-k:]
+  maxList = []
+  for i in range(len(maxValues)):
+    maxList.append(max(maxValues))
+    maxValues[maxValues.index(max(maxValues))] //= 2
+  return sum(maxList)
+
 
 # Driver method:
 if __name__ == '__main__':
@@ -74,7 +84,7 @@ if __name__ == '__main__':
   # array of candy bags. First candy bag has 2 candies, second has 1 candy, third has 7 candies and so on..
   arr = [2, 1, 7, 4, 2]
   #output = maxcandies(arr, k)
-  output = max_candies(arr, k)
+  output = max_candies1(arr, k)
   expected = 14
   check(expected, output)
 
@@ -83,7 +93,7 @@ if __name__ == '__main__':
   arr_2 = [19, 78, 76, 72, 48, 8, 24, 74, 29]
   expected_2 = 228
   #output_2 = maxcandies(arr_2, k_2)
-  output_2 = max_candies(arr_2, k_2)
+  output_2 = max_candies1(arr_2, k_2)
   check(expected_2, output_2)
 
   # Your task is to find out in 3 minutes how many maximum candies you can eat.
