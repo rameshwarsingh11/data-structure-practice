@@ -83,7 +83,6 @@ if __name__ == '__main__':
   k = 3  # means you have total 3 minutes to eat candies
   # array of candy bags. First candy bag has 2 candies, second has 1 candy, third has 7 candies and so on..
   arr = [2, 1, 7, 4, 2]
-  #output = maxcandies(arr, k)
   output = max_candies1(arr, k)
   expected = 14
   check(expected, output)
@@ -92,7 +91,6 @@ if __name__ == '__main__':
   n_2, k_2 = 9, 3
   arr_2 = [19, 78, 76, 72, 48, 8, 24, 74, 29]
   expected_2 = 228
-  #output_2 = maxcandies(arr_2, k_2)
   output_2 = max_candies1(arr_2, k_2)
   check(expected_2, output_2)
 
