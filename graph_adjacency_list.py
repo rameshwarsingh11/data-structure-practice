@@ -1,5 +1,8 @@
 # Graph implementation using Adjacency list provides more space efficient data structure for storing sparse matrices
 # Adjacency List in Python to implement a Graph
+from pickle import NONE
+
+
 class Vertex:
 
   def __init__(self, key):
@@ -13,7 +16,8 @@ class Vertex:
     return self.connectedTo.keys()
 
   def getVertexWeight(self,nbr=1):
-    return self.connectedTo[nbr].weight
+    return NONE
+    #return self.connectedTo[nbr].weight
 
   def getId(self):
     return self.id
