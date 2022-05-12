@@ -1,6 +1,4 @@
 # Find if the change coin denominations can make the target money. Return True if possible otherwise return False :
-
-
 def canGetExactChange(targetMoney, denominations):
 
     dp = [float('inf')] * (targetMoney + 1)
