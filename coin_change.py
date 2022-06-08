@@ -6,7 +6,6 @@ def change_coins(n, coins):
   for coin in coins:
     for i in range(coin, n+1):
       arr[i] += arr[i-coin]
-      # print("in loop :::", arr[i])
 
   # Check for edge case:
   if n == 0:
