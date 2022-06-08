@@ -80,4 +80,5 @@ for vertex in graph:
     print(vertex)
     print(vertex.getConnections())
     print(vertex.getVertexWeight())
+    print(graph)
     print('\n')
