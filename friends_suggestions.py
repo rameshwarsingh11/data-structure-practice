@@ -28,3 +28,4 @@ G = ['H', 'J']
 J = ['H', 'G', 'K', 'M']
 
 print(friendSuggest(Rob, 'Rob'))
+print(friendSuggest(A,C))
