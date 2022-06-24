@@ -41,7 +41,7 @@ if __name__ == '__main__':
     arr = [2, 2, 4, 5, 7, 9]
     output_1 = pair_sum(arr, k)
     check(expected_1, output_1)
-    k = 4
-    expected_2 = {(2,2)}
+    k = 6
+    expected_2 = {(3,3)}
     output_2 = pair_sum(arr,k)
     check(expected_2, output_2)
