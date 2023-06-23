@@ -1,5 +1,6 @@
 def nth_to_last_node(n, head):
     left_pointer = head
+
     right_pointer = head
 
     for i in range(n - 1):
